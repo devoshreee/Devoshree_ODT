@@ -1,0 +1,15 @@
+from machine import Pin,TouchPad
+import time
+
+a=Pin(15,Pin.OUT)
+t=TouchPad(Pin(12,Pin.IN))
+
+while True:
+    b_val=b.read()
+    print(b_val)
+    if b_val,=200:
+        print("Pin touched")
+        a.on()
+    else:
+        b.off()
+    time.sleep(0.2)
