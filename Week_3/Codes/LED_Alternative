@@ -1,0 +1,14 @@
+from machine import Pin
+import time
+
+a=Pin(15,Pin.OUT)
+b=Pin(14,Pin.OUT)
+
+#alternatively blinking LEDS
+while True:
+    a.on()
+    b.off()
+    time.sleep(1)
+    a.off()
+    b.on()
+    time.sleep(1)
