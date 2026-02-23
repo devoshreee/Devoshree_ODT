@@ -1,0 +1,17 @@
+from machine import Pin
+import time
+
+a=Pin(15,Pin.OUT)
+b=Pin(14,Pin.OUT)
+s=Pin(12,Pin.IN,Pin.PULL_UP)
+
+#value of limit switch decides which LED lights up
+while True:
+    s_val=s.value()
+    if s_val==1:
+        a.on()
+        b.off()
+    else:
+        b.on()
+        a.off()
+    time.sleep(0.2)
