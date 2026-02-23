@@ -1,0 +1,11 @@
+from machine import Pin
+import time
+
+a=Pin(15,Pin.OUT)
+
+#for making the LED blink infinetly 
+while True:
+    a.on()
+    time.sleep(1)
+    a.off()
+    time.sleep(1)
