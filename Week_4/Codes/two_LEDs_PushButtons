@@ -1,0 +1,18 @@
+from machine import Pin
+import time
+
+a=Pin(15,Pin.OUT)
+b=Pin(14,Pin.OUT)
+pb1=Pin(Pin(4,Pin.IN,Pin.PULL_UP))
+pb2=Pin(Pin(5,Pin.IN,Pin.PULL_UP))
+
+while True:
+    if pb1.value()==0:
+        a.on()
+        time.sleep(0.2)
+        a.off()
+    else:
+        b.on()
+        time.sleep(0.2)
+        b.off()
+    time.sleep(0.2)
