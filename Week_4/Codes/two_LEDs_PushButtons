@@ -3,8 +3,8 @@ import time
 
 a=Pin(15,Pin.OUT)
 b=Pin(14,Pin.OUT)
-pb1=Pin(Pin(4,Pin.IN,Pin.PULL_UP))
-pb2=Pin(Pin(5,Pin.IN,Pin.PULL_UP))
+pb1=Pin(4,Pin.IN,Pin.PULL_UP)
+pb2=Pin(5,Pin.IN,Pin.PULL_UP)
 
 while True:
     if pb1.value()==0:
